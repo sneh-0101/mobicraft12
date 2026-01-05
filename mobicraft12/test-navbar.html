@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Test - MobiCraft</title>
+    <link rel="stylesheet" href="navbar1.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background: #0a0f1c;
+            color: #fff;
+            min-height: 100vh;
+        }
+        
+        main {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        .test-info {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>MobiCraft</h1>
+        <button id="navbar-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="navbar-menu">
+            <a href="home.php" class="active">Home</a>
+            <a href="about.php">About</a>
+            <a href="contect.php">Contact</a>
+            <a href="pricelist.php">Pricelist</a>
+            
+            <!-- Dropdown Menus -->
+            <div class="dropdown">
+                <button class="dropdown-btn">Services ▼</button>
+                <div class="dropdown-content">
+                    <a href="phonedesign.php">Phone Design</a>
+                    <a href="screen.php">Screen Customization</a>
+                    <a href="battary.php">Battery Options</a>
+                    <a href="camara.php">Camera Setup</a>
+                    <a href="speci.php">Specifications</a>
+                </div>
+            </div>
+            
+            <div class="dropdown">
+                <button class="dropdown-btn">Support ▼</button>
+                <div class="dropdown-content">
+                    <a href="#warranty">Warranty Info</a>
+                    <a href="#battery-care">Battery Care</a>
+                    <a href="#shipping">Shipping Policy</a>
+                    <a href="#returns">Returns & Exchanges</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+            </div>
+            
+            <div class="dropdown">
+                <button class="dropdown-btn">Company ▼</button>
+                <div class="dropdown-content">
+                    <a href="#copyright">Copyright</a>
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="#careers">Careers</a>
+                    <a href="#press">Press Kit</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h2>Navbar Test Page</h2>
+        <div class="test-info">
+            <h3>Testing Instructions:</h3>
+            <p>1. Resize your browser window to mobile size (or use browser dev tools)</p>
+            <p>2. Click the hamburger menu (☰) button in the top right</p>
+            <p>3. The menu should slide down with all navigation items</p>
+            <p>4. Click on dropdown buttons to test dropdown functionality</p>
+            <p>5. Check browser console for any JavaScript errors</p>
+        </div>
+        
+        <div class="test-info">
+            <h3>Current Screen Size:</h3>
+            <p id="screen-size">Loading...</p>
+        </div>
+        
+        <div class="test-info">
+            <h3>Debug Info:</h3>
+            <p>Check browser console (F12) for detailed debug information</p>
+        </div>
+    </main>
+
+    <script src="navbar.js"></script>
+    <script>
+        // Display current screen size
+        function updateScreenSize() {
+            const size = document.getElementById('screen-size');
+            size.textContent = `${window.innerWidth} x ${window.innerHeight} pixels`;
+        }
+        
+        window.addEventListener('load', updateScreenSize);
+        window.addEventListener('resize', updateScreenSize);
+    </script>
+</body>
+</html>
+

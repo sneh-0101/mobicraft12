@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #0a0f1c;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  margin: 10px auto;
+  color: #7fdbff;
+}

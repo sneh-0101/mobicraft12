@@ -1,0 +1,21 @@
+    .next-btn{
+      position:fixed;bottom:15px;right:15px;
+      padding:12px 22px;
+      background:#ffae00;color:#000;font-weight:bold;
+      border:none;border-radius:10px;cursor:pointer;
+      transition:0.3s;
+      z-index:200;
+      width: auto;
+    }
+    .previs{
+      position: fixed;
+      bottom: 15px;
+      right: 120px;
+      padding:12px 22px;
+      background:#ffae00;color:#000;font-weight:bold;
+      border:none;border-radius:10px;cursor:pointer;
+      transition:0.3s;
+      z-index:200;
+      width: auto;
+
+    }
